@@ -80,7 +80,27 @@
   }
 
   .hero-img {
-    width: 60%;
+    width: 100%;
+  }
+
+  .hero-pos-visual {
+    width: min(100%, 62rem);
+    min-height: 42rem;
+    margin: 0 auto;
+  }
+
+  .hero-pos-laptop {
+    width: 100%;
+  }
+
+  .hero-pos-card--hardware {
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .hero-pos-card--status {
+    top: 2rem;
+    right: .5rem;
   }
 
   .delivered-meals {
@@ -255,6 +275,33 @@
     width: 80%;
   }
 
+  .hero-pos-visual {
+    min-height: 30rem;
+    width: 100%;
+  }
+
+  .hero-pos-laptop {
+    width: 100%;
+  }
+
+  .hero-pos-card--hardware {
+    left: -0.5rem;
+    bottom: 0;
+    gap: .8rem;
+    padding-right: 1rem;
+  }
+
+  .hero-pos-card--hardware img {
+    width: 4.8rem;
+    height: 4rem;
+  }
+
+  .hero-pos-card--status {
+    top: 0;
+    right: -0.5rem;
+    padding: .9rem 1rem;
+  }
+
   .logos img {
     height: 1.2rem;
   }
@@ -270,6 +317,31 @@
   .step-img-box {
     transform: translateY(2.4rem);
   }
+
+  .laptop-mockup {
+    width: 94%;
+  }
+
+  .laptop-pesaby {
+    width: 106%;
+  }
+
+  .section-how .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-how .step-text-box:nth-child(1) { order: 1; }
+  .section-how .step-img-box:nth-child(2) { grid-row: auto; order: 2; }
+  .section-how .step-text-box:nth-child(4) { order: 3; }
+  .section-how .step-img-box:nth-child(3) { order: 4; }
+  .section-how .step-text-box:nth-child(5) { order: 5; }
+  .section-how .step-img-box:nth-child(6) { grid-row: auto; order: 6; }
+
+  .section-how .laptop-mockup,
+  .section-how .laptop-pesaby {
+    width: 100%;
+  }
+
 
   .testimonials {
     grid-template-columns: 1fr;
@@ -308,6 +380,68 @@
 
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
   margin-right: 4.8rem;
+}
+
+@media (max-width: 75em) {
+  .landing-header .main-nav-link:link,
+  .landing-header .main-nav-link:visited { padding-right: .8rem; padding-left: .8rem; font-size: 1.2rem; }
+  .landing-brand-copy small { letter-spacing: .12em; }
+}
+
+@media (max-width: 59em) {
+  .header.landing-header { height: 7.2rem; padding: 0 2.4rem; }
+  .landing-header .main-nav { top: 0; z-index: 900; background: rgba(255, 255, 255, .98); }
+  .landing-header .main-nav-list { gap: 1.2rem; }
+  .landing-header .main-nav-link:link,
+  .landing-header .main-nav-link:visited { padding: .8rem 1.2rem; font-size: 2rem; }
+  .landing-header .main-nav-link.nav-cta:link,
+  .landing-header .main-nav-link.nav-cta:visited { margin-left: 0; }
+  .landing-hero { padding: 4.4rem 2.4rem 0; }
+  .landing-hero .heading-primary { max-width: 68rem; font-size: clamp(3.6rem, 7vw, 5.2rem); }
+  .landing-hero .hero-description { font-size: 1.7rem; }
+  .landing-hero-preview { width: min(100%, 76rem); margin-top: 3.2rem; padding: 0 1.2rem; }
+  .landing-header-actions { display: none; }
+  .landing-mobile-actions { display: list-item; }
+  .landing-header .main-nav-list { gap: 1.4rem; }
+  .landing-header .main-nav-link:link,
+  .landing-header .main-nav-link:visited { font-size: 2rem; }
+  .section-hero.landing-hero { padding: 4.8rem 2.4rem 5.6rem; }
+  .landing-hero-inner.landing-hero-grid { min-height: 0; grid-template-columns: 1fr; gap: 3.2rem; }
+  .landing-hero-copy { max-width: 70rem; }
+  .landing-hero-art { width: min(100%, 68rem); height: 43rem; margin: 0 auto; }
+  .landing-hero-laptop { width: 100%; }
+  .landing-hero-save { top: 1rem; right: 1rem; }
+  .landing-art-card--sales { top: 24%; left: 0; }
+  .landing-art-card--stats { right: 0; bottom: 0; }
+}
+
+@media (max-width: 34em) {
+  .header.landing-header { height: 6.8rem; padding: 0 1.8rem; }
+  .landing-brand-mark { width: 3.4rem; height: 3.4rem; }
+  .landing-brand-copy strong { font-size: 1.7rem; }
+  .landing-hero { padding: 3.6rem 1.8rem 4.8rem; }
+  .landing-hero .heading-primary { margin-top: 0; font-size: 3.8rem; }
+  .landing-hero .hero-description { font-size: 1.55rem; line-height: 1.65; }
+  .landing-hero-actions { flex-direction: column; align-items: stretch; }
+  .landing-hero-actions .btn,
+  .landing-hero-actions .btn:link,
+  .landing-hero-actions .btn:visited { width: 100%; }
+  .landing-hero-inner.landing-hero-grid { gap: 1.8rem; }
+  .landing-hero-stats { gap: .6rem; margin-top: 2.2rem; }
+  .landing-hero-stats div { padding: 1rem .4rem; }
+  .landing-hero-stats strong { font-size: 1.7rem; }
+  .landing-hero-stats span { font-size: .9rem; }
+  .landing-hero-art { height: 38.4rem; }
+  .landing-hero-laptop { width: 105%; }
+  .landing-art-card { gap: .7rem; padding: .8rem 1rem; }
+  .landing-art-card strong { font-size: 1.1rem; }
+  .landing-art-card small { font-size: .9rem; }
+  .landing-hero-save { top: 0; right: 0; width: 4.6rem; height: 4.6rem; }
+  .landing-art-card--sales { top: 23%; left: 0; width: 18.5rem; padding: 1rem; grid-template-columns: 3.2rem minmax(0, 1fr); column-gap: .8rem; }
+  .landing-art-card--stats { right: 0; bottom: -.2rem; width: 14rem; padding: 1rem; }
+  .landing-art-sales-icon { width: 3.2rem; height: 3.2rem; }
+  .landing-art-sales-copy strong { font-size: 1.3rem; white-space: nowrap; }
+  .landing-art-card--stats p { font-size: .95rem; }
 }
 
 .no-flexbox-gap .list-item:not(:last-child) {
